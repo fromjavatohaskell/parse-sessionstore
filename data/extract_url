@@ -1,0 +1,2 @@
+#!/bin/sh
+cat sessionstore.js | jq -r '.windows[].tabs[].entries[]|(.url+" => "+.title)' 

@@ -1,0 +1,5 @@
+about:home => New Tab
+https://duckduckgo.com/ => DuckDuckGo — Privacy, simplified.
+https://www.youtube.com/ => YouTube
+https://www.reddit.com/ => reddit: the front page of the internet
+https://github.com/ => The world’s leading software development platform · GitHub
