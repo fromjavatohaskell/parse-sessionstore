@@ -1,0 +1,25 @@
+name:                parse-sessionstore
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/fromjavatohaskell/parse-sessionstore
+license:             MIT
+license-file:        LICENSE
+author:              FromJavaToHaskell
+maintainer:          fromjavatohaskell@gmail.com
+copyright:           2018 FromJavaToHaskell
+category:            Console Utility
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+executable backup-session
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base, text, bytestring, aeson
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/fromjavatohaskell/parse-sessionstore
