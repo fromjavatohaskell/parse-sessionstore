@@ -9,7 +9,12 @@ For format of sessionstore.js file see https://wiki.mozilla.org/Firefox/session_
 The structure of sessionstore.js
 
 windows the currently opened windows (array)
+
    tabs the currently opened tabs (array)
+
       entries the history of the tab (array)
+
          url (string)
+
          title (string, optional)
+
