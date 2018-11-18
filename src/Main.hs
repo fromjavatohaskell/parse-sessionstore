@@ -35,7 +35,7 @@ extractData = f "windows" $ e $ f "tabs" $ e $ f "entries" $ e $ getUrlAndTitle
 -- main :: IO ()
 
 main = do
-  contents <- LB.hGetContents IO.stdin
+  contents <- LB.getContents
   case decode contents >>= parseMaybe extractData of
     Just list -> F.traverse_ T.putStrLn list
     Nothing ->   T.hPutStrLn IO.stderr "error parsing session store"
