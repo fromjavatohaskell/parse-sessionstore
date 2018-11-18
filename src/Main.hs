@@ -38,5 +38,5 @@ main = do
   contents <- LB.hGetContents IO.stdin
   case decode contents >>= parseMaybe extractData of
     Just list -> F.traverse_ T.putStrLn list
-    Nothing ->   T.hPutStrLn IO.stderr $ T.pack "error parsing session store"
+    Nothing ->   T.hPutStrLn IO.stderr "error parsing session store"
 
