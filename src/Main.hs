@@ -6,6 +6,7 @@ module Main where
 
 import           Data.Aeson
 import           Data.Aeson.Types
+import qualified Data.Foldable        as F
 import qualified Data.ByteString.Lazy as LB
 import qualified Data.Text            as T
 import qualified Data.Text.IO         as T
@@ -36,6 +37,6 @@ extractData = f "windows" $ e $ f "tabs" $ e $ f "entries" $ e $ getUrlAndTitle
 main = do
   contents <- LB.hGetContents IO.stdin
   case decode contents >>= parseMaybe extractData of
-    Just list -> const () <$> traverse T.putStrLn list
+    Just list -> F.traverse_ T.putStrLn list
     Nothing ->   T.hPutStrLn IO.stderr $ T.pack "error parsing session store"
 
