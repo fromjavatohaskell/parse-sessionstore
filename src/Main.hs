@@ -32,8 +32,8 @@ extractData = f "windows" $ e $ f "tabs" $ e $ f "entries" $ e $ getUrlAndTitle
 -- decode :: LB.ByteString -> Maybe Value
 -- parseMaybe extractData :: Value -> Maybe [T.Text]
 -- T.putStrLn :: T.Text -> IO ()
--- main :: IO ()
 
+main :: IO ()
 main = do
   contents <- LB.getContents
   case decode contents >>= parseMaybe extractData of
