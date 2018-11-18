@@ -16,7 +16,7 @@ getUrlAndTitle :: Value -> Parser [T.Text]
 getUrlAndTitle = withObject "urlAndTitle" $ \o -> do
   url   <- o .: "url"
   title <- o .: "title"
-  return $ [url <> " => " <> title]
+  return [url <> " => " <> title]
 
 entries :: (Value -> Parser [a]) -> Value -> Parser [a]
 entries f = withArray "entries" $ \arr -> concat <$> traverse f arr
