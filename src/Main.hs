@@ -31,11 +31,11 @@ extractData = f "windows" $ e $ f "tabs" $ e $ f "entries" $ e $ getUrlAndTitle
 -- decode :: LB.ByteString -> Maybe Value
 -- parseMaybe extractData :: Value -> Maybe [T.Text]
 -- T.putStrLn :: T.Text -> IO ()
--- main :: IO [()]
+-- main :: IO ()
 
 main = do
   contents <- LB.hGetContents IO.stdin
   case decode contents >>= parseMaybe extractData of
-    Just list -> traverse T.putStrLn list
-    Nothing ->   traverse (T.hPutStrLn IO.stderr) [T.pack "error parsing session store"]
+    Just list -> const () <$> traverse T.putStrLn list
+    Nothing ->   T.hPutStrLn IO.stderr $ T.pack "error parsing session store"
 
