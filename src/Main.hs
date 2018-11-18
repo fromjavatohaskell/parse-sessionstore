@@ -28,10 +28,8 @@ extractData :: Value -> Parser [T.Text]
 extractData = f "windows" $ e $ f "tabs" $ e $ f "entries" $ e $ getUrlAndTitle
   where f = field; e = entries
 
--- LB.hGetContents IO.stdin :: IO LB.ByteString
 -- decode :: LB.ByteString -> Maybe Value
 -- parseMaybe extractData :: Value -> Maybe [T.Text]
--- T.putStrLn :: T.Text -> IO ()
 
 main :: IO ()
 main = do
