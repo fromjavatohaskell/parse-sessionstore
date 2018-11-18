@@ -26,7 +26,7 @@ field key f = withObject (T.unpack key) $ \o -> (o .: key) >>= f
 
 extractData :: Value -> Parser [T.Text]
 extractData = f "windows" $ e $ f "tabs" $ e $ f "entries" $ e $ getUrlAndTitle
- where f = field; e = entries
+  where f = field; e = entries
 
 -- LB.hGetContents IO.stdin :: IO LB.ByteString
 -- decode :: LB.ByteString -> Maybe Value
@@ -38,5 +38,5 @@ main = do
   contents <- LB.getContents
   case decode contents >>= parseMaybe extractData of
     Just list -> F.traverse_ T.putStrLn list
-    Nothing ->   T.hPutStrLn IO.stderr "error parsing session store"
+    Nothing -> T.hPutStrLn IO.stderr "error parsing session store"
 
