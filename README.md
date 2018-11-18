@@ -1,4 +1,4 @@
-# parse_sessionstore
+# parse-sessionstore
 
 Small program to extract urls from Mozilla sessionstore.js file
 
