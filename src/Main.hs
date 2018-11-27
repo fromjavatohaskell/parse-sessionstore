@@ -5,8 +5,8 @@
 module Main where
 
 import           Control.Monad (void)
-import           Data.Aeson
-import           Data.Aeson.Types
+import           Data.Aeson (Value, FromJSON, decode, withObject, withArray, (.:))
+import           Data.Aeson.Types (Parser, parseMaybe)
 import qualified Data.ByteString.Lazy as LB
 import           Data.Text (Text)
 import qualified Data.Text            as T
