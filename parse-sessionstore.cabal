@@ -4,7 +4,7 @@ version:             0.1.0.0
 -- description:
 homepage:            https://github.com/fromjavatohaskell/parse-sessionstore
 license:             MIT
-license-file:        LICENSE
+license-file:        LICENSE-MIT
 author:              FromJavaToHaskell
 maintainer:          fromjavatohaskell@gmail.com
 copyright:           2018 FromJavaToHaskell

@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
--- license MIT https://raw.githubusercontent.com/fromjavatohaskell/parse-sessionstore/master/LICENSE
+-- license MIT https://raw.githubusercontent.com/fromjavatohaskell/parse-sessionstore/master/LICENSE-MIT
 
 module Main where
 
