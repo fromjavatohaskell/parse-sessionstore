@@ -1,0 +1,2 @@
+#!/bin/sh
+js/parse-sessionstore.js <data/sessionstore.js
